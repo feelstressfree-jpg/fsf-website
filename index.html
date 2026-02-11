@@ -1,39 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Feel Stress Free</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body{
-      margin:0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg,#1e3c72,#2a5298);
-      color:white;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      height:100vh;
-      text-align:center;
-    }
-    .box{
-      background:rgba(255,255,255,0.1);
-      padding:40px;
-      border-radius:15px;
-      backdrop-filter:blur(10px);
-      box-shadow:0 10px 25px rgba(0,0,0,0.3);
-    }
-    h1{
-      margin-bottom:10px;
-    }
-    p{
-      opacity:0.8;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feel Stress Free</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:linear-gradient(135deg,#1e3c72,#2a5298);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+color:white;
+text-align:center;
+}
+
+.card{
+background:rgba(255,255,255,0.1);
+padding:40px;
+border-radius:20px;
+backdrop-filter:blur(10px);
+box-shadow:0 8px 32px rgba(0,0,0,0.3);
+}
+
+h1{
+margin-bottom:10px;
+font-size:40px;
+}
+
+p{
+margin-bottom:20px;
+}
+
+button{
+padding:12px 25px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+background:white;
+color:#1e3c72;
+font-weight:bold;
+}
+
+button:hover{
+background:#ddd;
+}
+</style>
 </head>
+
 <body>
-  <div class="box">
-    <h1>Feel Stress Free</h1>
-    <p>Your official website is live 🚀</p>
-  </div>
+
+<div class="card">
+<h1>Feel Stress Free</h1>
+<p>Your Official Website is Live 🚀</p>
+<button onclick="alert('Welcome to FSF!')">Get Started</button>
+</div>
+
 </body>
 </html>
