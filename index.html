@@ -27,21 +27,62 @@ padding:60px 20px;
 text-align:center;  
 }  
   
+/* ===== HERO SECTION UPDATED ===== */
+
 .hero{  
-background:linear-gradient(135deg,#1e3c72,#2a5298);  
+position:relative;  
+background:linear-gradient(135deg,#1e3c72,#2a5298,#4facfe,#00f2fe);  
+overflow:hidden;  
+color:white;  
 }  
-  
+
+.hero::before{  
+content:"🌸 🌼 🌺 🌷";  
+position:absolute;  
+top:20px;  
+left:20px;  
+font-size:40px;  
+opacity:0.3;  
+}  
+
+.hero::after{  
+content:"🌺 🌼 🌸";  
+position:absolute;  
+bottom:20px;  
+right:20px;  
+font-size:40px;  
+opacity:0.3;  
+}  
+
+.hero h1{  
+font-size:42px;  
+background:linear-gradient(to right,#ffecd2,#fcb69f,#ff9a9e);  
+-webkit-background-clip:text;  
+-webkit-text-fill-color:transparent;  
+font-weight:bold;  
+margin-bottom:20px;  
+}  
+
+.hero p{  
+font-size:18px;  
+color:#f1f5f9;  
+max-width:700px;  
+margin:auto;  
+}  
+
 button{  
 padding:12px 25px;  
 border:none;  
-border-radius:8px;  
+border-radius:25px;  
 cursor:pointer;  
 background:white;  
 color:#1e3c72;  
 font-weight:bold;  
-margin-top:15px;  
+margin-top:25px;  
+font-size:16px;  
+box-shadow:0 0 15px rgba(255,255,255,0.5);  
 }  
-  
+
 .card{  
 background:#1e293b;  
 padding:30px;  
@@ -74,7 +115,7 @@ Feel Stress Free (FSF)
 </header>  
   
 <section class="hero">  
-<h1>आप अपनी बात कहो, हम सुनेंगे</h1>  
+<h1>दिल से दिल की बातें सुनने के लिए हम है ना</h1>  
 <p>अगर आप अकेला महसूस करते हैं और किसी से दिल की बात शेयर करना चाहते हैं — हम आपके साथ हैं।</p>  
 <button onclick="alert('जल्द ही कॉल सिस्टम एक्टिव होगा')">अभी जुड़ें</button>  
 </section>  
