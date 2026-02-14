@@ -18,9 +18,11 @@ font-weight:bold;margin-bottom:20px}
 .hero p{font-size:18px;color:#f1f5f9;max-width:700px;margin:auto}
 button{
 padding:14px 30px;border:none;border-radius:30px;cursor:pointer;
-background:white;color:#1e3c72;font-weight:bold;margin-top:25px;font-size:16px}
+background:white;color:#1e3c72;font-weight:bold;margin-top:20px;font-size:16px}
 .card{background:#1e293b;padding:30px;border-radius:15px;margin:20px auto;max-width:600px}
-input{width:90%;padding:12px;margin:10px 0;border-radius:6px;border:none}
+input{
+width:90%;padding:12px;margin:10px 0;border-radius:6px;border:none
+}
 footer{background:#020617;padding:20px;text-align:center;font-size:14px}
 </style>
 </head>
@@ -32,9 +34,17 @@ footer{background:#020617;padding:20px;text-align:center;font-size:14px}
 <section class="hero">
 <h1>दिल से दिल की बातें सुनने के लिए हम है ना</h1>
 <p>अगर आप अकेला महसूस करते हैं और किसी से दिल की बात शेयर करना चाहते हैं — हम आपके साथ हैं।</p>
+
 <p style="font-size:16px;color:#e0f2fe;margin-top:15px;">
 Payment करने के बाद हमारा listener आपको audio call करेगा।
 </p>
+
+<!-- REFERRAL CODE (ONLY CHANGE) -->
+<p style="font-size:14px;color:#cbd5f5;margin-top:20px;">
+अगर किसी influencer ने भेजा है तो referral code डालें
+</p>
+<input type="text" id="refCode" placeholder="Referral Code (optional)">
+
 <button onclick="payNow()">₹99 में अभी जुड़ें</button>
 </section>
 
@@ -68,13 +78,6 @@ Payment करने के बाद हमारा listener आपको audi
 </section>
 
 <section>
-<h2>Referral Code (Optional)</h2>
-<div class="card">
-<input type="text" id="refCode" placeholder="Referral Code (अगर है)">
-</div>
-</section>
-
-<section>
 <h2>संपर्क</h2>
 <div class="card">
 <p>Email: feelstressfree@gmail.com</p>
@@ -85,10 +88,11 @@ Payment करने के बाद हमारा listener आपको audi
 <footer>© 2025 Feel Stress Free (FSF) | All Rights Reserved</footer>
 
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
 <script>
 function payNow(){
 var options = {
-  key: "rzp_test_SFvUBwtII3s6EK",
+  key: "rzp_test_SFvvMaIQFRe0gr",
   amount: 9900,
   currency: "INR",
   name: "Feel Stress Free",
