@@ -6,119 +6,53 @@
 <title>Feel Stress Free (FSF)</title>
 
 <style>
-body{
-margin:0;
-font-family:Arial, sans-serif;
-background:#0f172a;
-color:white;
-scroll-behavior:smooth;
-}
-
-header{
-background:#1e293b;
-padding:20px;
-text-align:center;
-font-size:24px;
-font-weight:bold;
-}
-
-section{
-padding:60px 20px;
-text-align:center;
-}
-
-/* HERO */
-.hero{
-position:relative;
-background:linear-gradient(135deg,#1e3c72,#2a5298,#4facfe,#00f2fe);
-color:white;
-}
-
+body{margin:0;font-family:Arial, sans-serif;background:#0f172a;color:white}
+header{background:#1e293b;padding:20px;text-align:center;font-size:24px;font-weight:bold}
+section{padding:60px 20px;text-align:center}
+.hero{background:linear-gradient(135deg,#1e3c72,#2a5298,#4facfe,#00f2fe)}
 .hero h1{
 font-size:40px;
 background:linear-gradient(to right,#ffecd2,#fcb69f,#ff9a9e);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-font-weight:bold;
-margin-bottom:20px;
-}
-
-.hero p{
-font-size:18px;
-color:#f1f5f9;
-max-width:700px;
-margin:auto;
-}
-
+-webkit-background-clip:text;-webkit-text-fill-color:transparent;
+font-weight:bold;margin-bottom:20px}
+.hero p{font-size:18px;color:#f1f5f9;max-width:700px;margin:auto}
 button{
-padding:14px 30px;
-border:none;
-border-radius:30px;
-cursor:pointer;
-background:white;
-color:#1e3c72;
-font-weight:bold;
-margin-top:25px;
-font-size:16px;
-}
-
-.card{
-background:#1e293b;
-padding:30px;
-border-radius:15px;
-margin:20px auto;
-max-width:600px;
-}
-
-input{
-width:90%;
-padding:12px;
-margin:10px 0;
-border-radius:6px;
-border:none;
-}
-
-footer{
-background:#020617;
-padding:20px;
-text-align:center;
-font-size:14px;
-}
+padding:14px 30px;border:none;border-radius:30px;cursor:pointer;
+background:white;color:#1e3c72;font-weight:bold;margin-top:25px;font-size:16px}
+.card{background:#1e293b;padding:30px;border-radius:15px;margin:20px auto;max-width:600px}
+input{width:90%;padding:12px;margin:10px 0;border-radius:6px;border:none}
+footer{background:#020617;padding:20px;text-align:center;font-size:14px}
 </style>
 </head>
 
 <body>
 
-<header>
-Feel Stress Free (FSF)
-</header>
+<header>Feel Stress Free (FSF)</header>
 
 <section class="hero">
 <h1>दिल से दिल की बातें सुनने के लिए हम है ना</h1>
 <p>अगर आप अकेला महसूस करते हैं और किसी से दिल की बात शेयर करना चाहते हैं — हम आपके साथ हैं।</p>
-
 <p style="font-size:16px;color:#e0f2fe;margin-top:15px;">
 Payment करने के बाद हमारा listener आपको audio call करेगा।
 </p>
-
 <button onclick="payNow()">₹99 में अभी जुड़ें</button>
 </section>
 
 <section>
 <h2>हमारी सेवा</h2>
 <div class="card">
-<p>✔ सिर्फ Audio Call (Video Call नहीं)</p>
+<p>✔ सिर्फ Audio Call (Video नहीं)</p>
 <p>✔ ₹99 में 30 मिनट बातचीत</p>
-<p>✔ रोज़ 10AM से 10PM तक उपलब्ध</p>
-<p>✔ Advice या Therapy नहीं — सिर्फ बातचीत</p>
+<p>✔ रोज़ 10AM से 10PM</p>
+<p>✔ Advice / Therapy नहीं — सिर्फ बातचीत</p>
 </div>
 </section>
 
 <section>
 <h2>महत्वपूर्ण नियम</h2>
 <div class="card">
-<p>⚠ अश्लील / गलत भाषा बिल्कुल नहीं</p>
-<p>⚠ बदतमीजी पर कॉल तुरंत बंद</p>
+<p>⚠ अश्लील / गलत भाषा नहीं</p>
+<p>⚠ बदतमीजी पर कॉल बंद</p>
 <p>⚠ केवल normal और emotional बातचीत</p>
 </div>
 </section>
@@ -126,12 +60,10 @@ Payment करने के बाद हमारा listener आपको audi
 <section>
 <h2>Promotion Opportunity</h2>
 <div class="card">
-<p>अगर आप Instagram / Social Media पर active हैं और हमारी website promote करना चाहते हैं, तो आप जुड़ सकते हैं।</p>
+<p>अगर आप Social Media पर active हैं और हमारी website promote करना चाहते हैं, तो जुड़ सकते हैं।</p>
 <p>✔ Honest promotion</p>
 <p>✔ Monthly performance based benefit</p>
-<p style="font-size:14px;color:#cbd5f5;">
-Note: यह job या counselling service नहीं है।
-</p>
+<p style="font-size:14px;color:#cbd5f5;">Note: यह job या counselling service नहीं है।</p>
 </div>
 </section>
 
@@ -150,33 +82,26 @@ Note: यह job या counselling service नहीं है।
 </div>
 </section>
 
-<footer>
-© 2025 Feel Stress Free (FSF) | All Rights Reserved
-</footer>
+<footer>© 2025 Feel Stress Free (FSF) | All Rights Reserved</footer>
 
-<!-- Razorpay -->
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-
 <script>
 function payNow(){
 var options = {
-"key": "rzp_test_SFv9iKyWdYcXVj",
-"amount": 9900,
-"currency": "INR",
-"name": "Feel Stress Free",
-"description": "30 मिनट Audio Conversation",
-"handler": function (response){
-alert("Payment successful ✅\nहमारा listener आपको call करेगा।");
-},
-"notes": {
-"referral_code": document.getElementById("refCode").value
-},
-"theme": {
-"color": "#2563eb"
-}
+  key: "rzp_test_SFvUBwtII3s6EK",
+  amount: 9900,
+  currency: "INR",
+  name: "Feel Stress Free",
+  description: "30 मिनट Audio Conversation",
+  handler: function (){
+    alert("Payment successful ✅\nहमारा listener आपको call करेगा।");
+  },
+  notes: {
+    referral_code: document.getElementById("refCode").value || ""
+  },
+  theme: { color: "#2563eb" }
 };
-var rzp1 = new Razorpay(options);
-rzp1.open();
+new Razorpay(options).open();
 }
 </script>
 
