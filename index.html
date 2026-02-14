@@ -49,13 +49,11 @@ footer{background:#020617;padding:20px;text-align:center;font-size:14px}
 Payment करने के बाद हमारा listener आपको audio call करेगा।
 </p>
 
-<!-- PRICE DISPLAY -->
 <div class="price-box">
   <div class="old-price" id="oldPrice">₹120</div>
   <div id="finalPrice">₹120</div>
 </div>
 
-<!-- REFERRAL CODE -->
 <p style="font-size:14px;color:#cbd5f5;margin-top:20px;">
 अगर किसी influencer ने भेजा है तो referral code डालें
 </p>
@@ -108,13 +106,16 @@ Payment करने के बाद हमारा listener आपको audi
 <script>
 function payNow(){
 
-  let referral = document.getElementById("refCode").value.trim();
+  let referral = document.getElementById("refCode").value.trim().toUpperCase();
+
+  // ✅ ONLY VALID INFLUENCER CODES
+  const validCodes = ["AMAN20", "FSF99", "RAHUL20"];
 
   let amount = 12000; // ₹120 default
   let displayPrice = "₹120";
 
-  if(referral !== ""){
-    amount = 9900; // ₹99 with referral
+  if(validCodes.includes(referral)){
+    amount = 9900; // ₹99 ONLY for valid code
     displayPrice = "₹99";
     document.getElementById("oldPrice").style.display = "block";
   } else {
@@ -124,7 +125,7 @@ function payNow(){
   document.getElementById("finalPrice").innerText = displayPrice;
 
   var options = {
-    key: "rzp_test_SFxxXwyQsKwjxb",
+    key: "rzp_test_SFv9iKyWdYcXVj",
     amount: amount,
     currency: "INR",
     name: "Feel Stress Free",
