@@ -70,7 +70,7 @@ Payment करने के बाद हमारा listener आपको audi
 </p>
 <input type="text" id="refCode" placeholder="Referral Code (optional)">
 
-<button onclick="payNow()">अभी जुड़ें</button>
+<button onclick="openTerms()">अभी जुड़ें</button>
 </section>
 
 <section>
@@ -179,28 +179,52 @@ Serious mental health issues में कृपया licensed professional स
 
 <footer>© 2025 Feel Stress Free (FSF) | All Rights Reserved</footer>
 
+<!-- TERMS MODAL -->
+<div id="termsModal">
+  <div id="termsBox">
+    <h2 style="text-align:center;">Terms & Conditions</h2>
+    <p>✔ यह therapy या counselling नहीं है</p>
+    <p>✔ केवल normal emotional बातचीत की अनुमति है</p>
+    <p>✔ अश्लील भाषा पर call terminate होगी</p>
+    <p>✔ Payment के बाद listener आपको call करेगा</p>
+
+    <label>
+      <input type="checkbox" id="agreeBox"> मैं सभी नियमों से सहमत हूँ
+    </label>
+
+    <button onclick="acceptTerms()">Proceed to Payment</button>
+  </div>
+</div>
+
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
 <script>
-function payNow(){
+const VALID_CODES = ["AMAN20","FSF20","PROMO99"];
 
-  let referral = document.getElementById("refCode").value.trim().toUpperCase();
+function openTerms(){
+  document.getElementById("termsModal").style.display="block";
+}
 
-  // ✅ ONLY VALID INFLUENCER CODES
-  const validCodes = ["AMAN20", "FSF99", "NEW20", "RAHUL20"];
-
-  let amount = 12000; // ₹120 default
-  let displayPrice = "₹120";
-
-  if(validCodes.includes(referral)){
-    amount = 9900; // ₹99 ONLY for valid code
-    displayPrice = "₹99";
-    document.getElementById("oldPrice").style.display = "block";
-  } else {
-    document.getElementById("oldPrice").style.display = "none";
+function acceptTerms(){
+  if(!document.getElementById("agreeBox").checked){
+    alert("Payment से पहले नियम स्वीकार करें");
+    return;
   }
+  document.getElementById("termsModal").style.display="none";
+  payNow();
+}
 
-  document.getElementById("finalPrice").innerText = displayPrice;
+function payNow(){
+  let referral=document.getElementById("refCode").value.trim().toUpperCase();
+  let amount=12000;
+  document.getElementById("oldPrice").style.display="none";
+  document.getElementById("finalPrice").innerText="₹120";
+
+  if(VALID_CODES.includes(referral)){
+    amount=9900;
+    document.getElementById("oldPrice").style.display="block";
+    document.getElementById("finalPrice").innerText="₹99";
+  }
 
   var options = {
     key: "rzp_live_SEr56mFJrbs9Cb",
