@@ -290,22 +290,27 @@ function payNow(){
 
   let referral = document.getElementById("refCode").value.trim().toUpperCase();
 
-  // ✅ ONLY VALID INFLUENCER CODES
-  const validCodes = ["NEW20", "RAHUL20"];
+const validCodes = [
+  "FSF9A3X7K2","Q8L5M2ZP7A","NEW20","T4X9KQ7M2L","ZP7A9L5XK2","M2L7QX9A5K",
+  "A7K2X9MQL5","9QKX7A2L5M","L5M2A9XQ7K","X9K7M2L5QA","7A9QKX2M5L",
+  "KX9L5M2Q7A","M5A2X9Q7KL","Q7K2M5A9XL","9LQX7K2A5M","A5X9M2Q7KL",
+  "K2Q7A9X5ML","X7L9QK2M5A","M9A5KX7Q2L","Q2X9L5K7MA","7KQ2M9X5AL",
+  "L2M5X9Q7KA","A9X5K2MQL7","K5Q9X2AL7M","9M7XKQ2A5L","Q9A5M2X7KL",
+  "X2K5L9MQ7A","7Q9M2KXAL5","M2K7QX9L5A","A7M5L2QX9K","9X2KQ5A7ML"
+];
 
-  let amount = 12000; // ₹120 default
-  let displayPrice = "₹120";
+let amount = 12000;        // ₹120 default
+let displayPrice = "₹120";
 
-  if(validCodes.includes(referral)){
-    amount = 9900; // ₹99 ONLY for valid code
-    displayPrice = "₹99";
-    document.getElementById("oldPrice").style.display = "block";
-  } else {
-    document.getElementById("oldPrice").style.display = "none";
-  }
+if (referral && validCodes.includes(referral)) {
+  amount = 9900;           // ₹99
+  displayPrice = "₹99";
+  document.getElementById("oldPrice").style.display = "block";
+} else {
+  document.getElementById("oldPrice").style.display = "none";
+}
 
-  document.getElementById("finalPrice").innerText = displayPrice;
-
+document.getElementById("finalPrice").innerText = displayPrice;
   var options = {
     key: "rzp_live_SEr56mFJrbs9Cb",
     amount: amount,
