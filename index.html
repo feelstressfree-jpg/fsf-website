@@ -113,9 +113,8 @@ If an influencer shared this with you, enter the referral code here.
 
   <ul>
     <li>
-      यदि ग्राहक कॉल के दौरान बदतमीजी करता है, गलत भाषा का प्रयोग करता है
-      या हमारी शर्तों का पालन नहीं करता है, तो कॉल तुरंत काट दी जाएगी
-      और किसी भी प्रकार का रिफंड नहीं दिया जाएगा।
+      Abusive or offensive language is not allowed during the call.
+If a customer uses abusive language, the call will be terminated immediately and no refund will be provided.
     </li>
 
     <li>
@@ -176,8 +175,7 @@ Here, you can share your thoughts and feelings with a real person without judgme
 <section>
 <h2>Important Rules</h2>
 <div class="card">
-<p>⚠ अश्लील भाषा या गलत व्यवहार स्वीकार नहीं</p>
-<p>⚠ बदतमीजी पर कॉल तुरंत समाप्त</p>
+<p>⚠ Abusive or offensive language is not allowed during the call.</p>
 <p>⚠ Only normal and emotional conversations.</p>
 <p>⚠ This is not a professional therapy service.</p>
 </div>
@@ -249,8 +247,7 @@ For serious mental health issues, please consult a licensed professional.
 
     <p>✔ This is not a counselling or therapy service.</p>
     <p>✔ Only normal and emotional conversations are allowed.</p>
-    <p>✔ अश्लील / गलत भाषा पूरी तरह मना है</p>
-    <p>✔ बदतमीजी करने पर call तुरंत बंद की जा सकती है</p>
+    <p>✔ Abusive or offensive language is not allowed during the call.</p>
     <p>✔ After the payment, the listener will call you via audio.</p>
 
 <div style="display:flex;align-items:center;gap:8px;margin:15px 0;">
@@ -311,12 +308,12 @@ const validCodes = [
 "FSF2X9K5M7","Q5M7X9A2KL","9KX5A2M7QL","M2A9KX7L5Q","7Q5M9XK2AL"
 ];
 
-let amount = 12000;        // ₹120 default
-let displayPrice = "₹120";
+let amount = 14900;        // ₹149 default
+let displayPrice = "₹149";
 
 if (referral && validCodes.includes(referral)) {
-  amount = 9900;           // ₹99
-  displayPrice = "₹99";
+  amount = 12900;           // ₹129
+  displayPrice = "₹129";
   document.getElementById("oldPrice").style.display = "block";
 } else {
   document.getElementById("oldPrice").style.display = "none";
