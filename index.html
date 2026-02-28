@@ -101,6 +101,17 @@ Once the payment is completed, our listener will connect with you through an aud
 <p style="font-size:14px;color:#cbd5f5;margin-top:20px;">
 If an influencer shared this with you, enter the referral code here.
 </p>
+<label style="display:block;margin-top:15px;font-weight:600;">
+  Select Your Gender <span style="color:red">*</span>
+</label>
+
+<select id="gender" required
+  style="width:100%;padding:10px;margin-top:5px;border-radius:6px;border:1px solid #ccc;">
+  <option value="">-- Select Gender --</option>
+  <option value="Male">Male</option>
+  <option value="Female">Female</option>
+  <option value="Other">Other</option>
+</select>  
 <input type="text" id="refCode" placeholder="Referral Code (optional)">
 
 <button onclick="openTerms()">Join Now</button>
@@ -279,6 +290,12 @@ function acceptTerms(){
 <script>
 function payNow(){
 
+let gender = document.getElementById("gender").value;
+
+if (!gender) {
+  alert("Please select your gender before proceeding.");
+  return;
+}
   let referral = document.getElementById("refCode").value.trim().toUpperCase();
 
 const validCodes = [
