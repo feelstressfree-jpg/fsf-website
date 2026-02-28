@@ -273,7 +273,14 @@ For serious mental health issues, please consult a licensed professional.
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
 <script>
-function openTerms(){
+function openTerms() {
+  let gender = document.getElementById("gender").value;
+
+  if (!gender) {
+    alert("Please select your gender before continuing.");
+    return;
+  }
+
   document.getElementById("termsModal").style.display = "block";
 }
 
