@@ -5,7 +5,7 @@ FSF – Feel Stress Free (FINAL UPDATED FILES)
 - Case-sensitive exact match
 - Unlimited users per code
 - 20% OFF shown to user
-- FSF always receives ₹99
+- FSF always receives ₹119
 - Manual monthly influencer payout (no limit)
 - Email: feelstressfree@gmail.com
 - Domain: feelstressfree.in
